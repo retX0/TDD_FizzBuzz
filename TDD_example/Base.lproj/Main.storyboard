@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="TDD_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgJ-Me-Yrm">
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.99586802720000001" green="0.99997836350000002" blue="0.99989730119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxI-Sa-uxy">
+                                <accessibility key="accessibilityConfiguration" identifier="playagain"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="PLAY AGAIN">
+                                    <color key="titleColor" red="0.99586802720000001" green="0.99997836350000002" blue="0.99989730119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapplayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="75Q-WG-WRV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="goal" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQU-ZU-B1K">
+                                <accessibility key="accessibilityConfiguration" identifier="goal"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.99586802720000001" green="0.99997836350000002" blue="0.99989730119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-1j-Vjp">
+                                <accessibility key="accessibilityConfiguration" identifier="score"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.99586802720000001" green="0.99997836350000002" blue="0.99989730119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpV-Ap-K2C">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qou-o7-Ahk">
+                                        <accessibility key="accessibilityConfiguration" identifier="play"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="70"/>
+                                        <state key="normal" title="0" backgroundImage="button_border">
+                                            <color key="titleColor" red="0.99586802720000001" green="0.99997836350000002" blue="0.99989730119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GlJ-mn-jOE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDj-cV-dwq">
+                                        <accessibility key="accessibilityConfiguration" identifier="fizzButton"/>
+                                        <state key="normal" image="champagne" backgroundImage="button_border"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kv7-VL-FB6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDr-sj-9fb">
+                                        <accessibility key="accessibilityConfiguration" identifier="fizzBuzzButton"/>
+                                        <state key="normal" image="lightning" backgroundImage="button_border"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DL4-DZ-And"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GY-k0-5TC">
+                                        <accessibility key="accessibilityConfiguration" identifier="buzzButton"/>
+                                        <state key="normal" image="space" backgroundImage="button_border"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IEU-42-Wxi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="mDj-cV-dwq" firstAttribute="height" secondItem="qou-o7-Ahk" secondAttribute="height" id="28R-A7-nWT"/>
+                                    <constraint firstItem="KDr-sj-9fb" firstAttribute="leading" secondItem="MpV-Ap-K2C" secondAttribute="leading" constant="20" symbolic="YES" id="7aY-Dv-aNU"/>
+                                    <constraint firstItem="mDj-cV-dwq" firstAttribute="top" secondItem="MpV-Ap-K2C" secondAttribute="top" constant="20" symbolic="YES" id="Akg-GM-jjs"/>
+                                    <constraint firstItem="qou-o7-Ahk" firstAttribute="top" secondItem="MpV-Ap-K2C" secondAttribute="top" constant="20" symbolic="YES" id="Cmg-8g-Vm9"/>
+                                    <constraint firstItem="qou-o7-Ahk" firstAttribute="leading" secondItem="MpV-Ap-K2C" secondAttribute="leading" constant="20" symbolic="YES" id="FLH-wm-8Kk"/>
+                                    <constraint firstAttribute="bottom" secondItem="5GY-k0-5TC" secondAttribute="bottom" constant="20" symbolic="YES" id="Gj1-pJ-JSx"/>
+                                    <constraint firstItem="5GY-k0-5TC" firstAttribute="leading" secondItem="KDr-sj-9fb" secondAttribute="trailing" constant="8" symbolic="YES" id="HOh-jk-dgE"/>
+                                    <constraint firstItem="mDj-cV-dwq" firstAttribute="width" secondItem="qou-o7-Ahk" secondAttribute="width" id="HSi-eo-Mao"/>
+                                    <constraint firstItem="5GY-k0-5TC" firstAttribute="height" secondItem="qou-o7-Ahk" secondAttribute="height" id="JPU-bD-XCb"/>
+                                    <constraint firstItem="5GY-k0-5TC" firstAttribute="top" secondItem="mDj-cV-dwq" secondAttribute="bottom" constant="8" symbolic="YES" id="Pta-0d-9wg"/>
+                                    <constraint firstItem="mDj-cV-dwq" firstAttribute="leading" secondItem="qou-o7-Ahk" secondAttribute="trailing" constant="8" symbolic="YES" id="YQX-g6-SRt"/>
+                                    <constraint firstItem="KDr-sj-9fb" firstAttribute="height" secondItem="qou-o7-Ahk" secondAttribute="height" id="eMh-Rs-9V1"/>
+                                    <constraint firstAttribute="trailing" secondItem="mDj-cV-dwq" secondAttribute="trailing" constant="20" symbolic="YES" id="hTQ-Q3-KFn"/>
+                                    <constraint firstAttribute="bottom" secondItem="KDr-sj-9fb" secondAttribute="bottom" constant="20" symbolic="YES" id="mag-7I-m0X"/>
+                                    <constraint firstItem="5GY-k0-5TC" firstAttribute="width" secondItem="qou-o7-Ahk" secondAttribute="width" id="ndg-NB-9vL"/>
+                                    <constraint firstItem="KDr-sj-9fb" firstAttribute="width" secondItem="qou-o7-Ahk" secondAttribute="width" id="rih-Lc-Jv8"/>
+                                    <constraint firstAttribute="width" secondItem="MpV-Ap-K2C" secondAttribute="height" multiplier="1:1" id="tjm-Cd-lZt"/>
+                                    <constraint firstItem="KDr-sj-9fb" firstAttribute="top" secondItem="qou-o7-Ahk" secondAttribute="bottom" constant="8" symbolic="YES" id="yCW-AG-Zeg"/>
+                                    <constraint firstAttribute="trailing" secondItem="5GY-k0-5TC" secondAttribute="trailing" constant="20" symbolic="YES" id="zmF-KJ-QYq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.75128203630447388" blue="0.69997066259384155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9h7-1j-Vjp" firstAttribute="centerY" secondItem="PgJ-Me-Yrm" secondAttribute="centerY" id="2KC-OA-40D"/>
+                            <constraint firstItem="BxI-Sa-uxy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9he-o3-Cwu"/>
+                            <constraint firstItem="MpV-Ap-K2C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B9a-hs-smy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BxI-Sa-uxy" secondAttribute="bottom" constant="20" id="HFf-Ls-Gju"/>
+                            <constraint firstItem="MpV-Ap-K2C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="HPV-7z-uIc"/>
+                            <constraint firstItem="hQU-ZU-B1K" firstAttribute="leading" secondItem="PgJ-Me-Yrm" secondAttribute="trailing" constant="8" symbolic="YES" id="XSb-nS-F2b"/>
+                            <constraint firstItem="hQU-ZU-B1K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="awF-gO-b5M"/>
+                            <constraint firstItem="MpV-Ap-K2C" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e7I-ae-Lx2"/>
+                            <constraint firstItem="PgJ-Me-Yrm" firstAttribute="leading" secondItem="9h7-1j-Vjp" secondAttribute="trailing" constant="8" symbolic="YES" id="gKn-NI-2dO"/>
+                            <constraint firstItem="hQU-ZU-B1K" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iDH-SL-Y0B"/>
+                            <constraint firstItem="PgJ-Me-Yrm" firstAttribute="centerY" secondItem="hQU-ZU-B1K" secondAttribute="centerY" id="wAY-Mi-ghe"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="buzzButton" destination="5GY-k0-5TC" id="Grp-1g-QWu"/>
+                        <outlet property="fizzButton" destination="mDj-cV-dwq" id="P0W-eI-amO"/>
+                        <outlet property="fizzBuzzButton" destination="KDr-sj-9fb" id="SOX-3b-Bqk"/>
+                        <outlet property="numberButton" destination="qou-o7-Ahk" id="yPG-e2-pRD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.199999999999999" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button_border" width="43" height="43"/>
+        <image name="champagne" width="49" height="50"/>
+        <image name="lightning" width="29" height="50"/>
+        <image name="space" width="47" height="50"/>
+    </resources>
+    <color key="tintColor" red="0.97707468271255493" green="0.96260517835617065" blue="0.84984177350997925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
